@@ -42,7 +42,7 @@ package multithreading;
     public class ThreadDemo {
         public static void main(String[] args) {
             MyThread t = new MyThread();
-            t.start(); //  here start method invoked because it Creates a new thread that executes `run()`
+            //t.start(); //  here start method invoked because it Creates a new thread that executes `run()`
 //            t.run();// every time same output because no thread creation every time( only one thread available)
         /*
             for (int i = 0; i < 10; i++) {
@@ -51,6 +51,18 @@ package multithreading;
 
          */
 
-            System.out.println(" main method ");
+            //System.out.println(" main method ");
+         //   t.start(); after the starting a thread if we trying to restart the same thread
+         // then it throws run time exception (RE) , saying " illegalThread state exception "
+
+            /*
+            // getting and setting name of thread
+            System.out.println(Thread.currentThread().getName());
+            System.out.println(t.getName());
+            Thread.currentThread().setName(" custom name ");
+            System.out.println(Thread.currentThread().getName());
+
+             */
         }
+
     }
